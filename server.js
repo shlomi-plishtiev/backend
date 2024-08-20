@@ -28,6 +28,7 @@ app.use(cors({
   origin: 'http://localhost:5173', 
   credentials: true
 }))
+app.use(express.static(path.join(__dirname, 'public')));
 
 // הגנת CSRF - יש להוסיף את התצורה המתאימה
 app.use(csurf({ cookie: true }))
